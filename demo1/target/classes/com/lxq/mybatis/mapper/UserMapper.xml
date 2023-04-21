@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lxq.mybatis.mapper.UserMapper">
+   <insert id="insert1">
+
+       insert into user values(null,"彤彤","6515615",19,"5165165")
+   </insert>
+    <update id="updateById">
+        update user set name="鑫" where id = 100
+    </update>
+    <delete id="deleteById">
+        delete from user where id = 102
+    </delete>
+    <select id="getUser" resultType="com.lxq.mybatis.pojo.User">
+        select * from user where id = 1
+    </select>
+    <select id="getAllUsers" resultType="User">
+        select * from user
+    </select>
+</mapper>
